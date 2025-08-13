@@ -121,6 +121,12 @@ button {
     border-radius: 0 25px 25px 0;
 }
 
+.btn-excluir {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
 .button-add:hover {
     background-color: #a1a1a1;
 }
