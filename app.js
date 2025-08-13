@@ -2,6 +2,8 @@ let listaNomes = [];
 let inputNome = document.getElementById('amigo');
 let lista = document.getElementById('listaAmigos');
 let botaoAdicionar = document.querySelector('.button-add');
+let botaoSortear = document.querySelector('.button-draw');
+let resultado = document.getElementById('resultado');
 
 function limparInput() {
     inputNome.value = '';
@@ -47,4 +49,22 @@ function gerenciarAmigos() {
         li.appendChild(botaoExcluir);
         lista.appendChild(li);
     });
+}
+
+function sortearAmigo() {
+    if (listaNomes.length < 2) {
+        alert('Insira dois ou mais nomes para realizar o sorteio.');
+        return;
+    }
+
+    resultado.innerHTML = ''; 
+    
+    let nomeAleatorio = Math.floor(Math.random() * listaNomes.length);
+
+    let resultadoSorteio = document.createElement('li');
+    resultadoSorteio.textContent = `Seu amigo secreto é: ${listaNomes[nomeAleatorio]}`;
+    resultado.appendChild(resultadoSorteio);
+
+    botaoAdicionar.disabled = true;
+    botaoSortear.disabled = true;
 }
