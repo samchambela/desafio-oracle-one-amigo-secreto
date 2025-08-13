@@ -25,6 +25,12 @@ function adicionarAmigo() {
     }
 }
 
+inputNome.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        adicionarAmigo();
+    }
+});
+
 function removerAmigo(nomeParaRemover) {
     let indice = listaNomes.indexOf(nomeParaRemover);
     if (indice > -1) {
