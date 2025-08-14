@@ -1,4 +1,7 @@
 let listaNomes = [];
+let nomesSorteados = [];
+
+
 let inputNome = document.getElementById('amigo');
 let lista = document.getElementById('listaAmigos');
 let botaoAdicionar = document.querySelector('.button-add');
@@ -51,7 +54,7 @@ function gerenciarAmigos() {
         botaoExcluir.classList.add('btn-excluir');
 
         botaoExcluir.onclick = () => removerAmigo(nome);
-        
+
         li.appendChild(botaoExcluir);
         lista.appendChild(li);
     });
@@ -63,14 +66,27 @@ function sortearAmigo() {
         return;
     }
 
-    resultado.innerHTML = ''; 
-    
-    let nomeAleatorio = Math.floor(Math.random() * listaNomes.length);
+    resultado.innerHTML = '';
+
+    let nome;
+    let nomeJaSorteado;
+    let indiceSorteado;
+
+    do {
+        indiceSorteado = Math.floor(Math.random() * listaNomes.length);
+        nome = listaNomes[indiceSorteado];
+        nomeJaSorteado = nomesSorteados.includes(nome);
+    } while (nomeJaSorteado);
+
+    nomesSorteados.push(nome);
+    console.log(nome);
+    console.log(nomesSorteados);
 
     let resultadoSorteio = document.createElement('li');
-    resultadoSorteio.textContent = `Seu amigo secreto é: ${listaNomes[nomeAleatorio]}`;
+    resultadoSorteio.textContent = `Seu amigo secreto é: ${listaNomes[indiceSorteado]}`;
     resultado.appendChild(resultadoSorteio);
 
     botaoAdicionar.disabled = true;
     botaoSortear.disabled = true;
 }
+
