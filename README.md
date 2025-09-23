@@ -1,12 +1,11 @@
 # Projeto Amigo Secreto 🎁
 
-Uma aplicação web simples e divertida para realizar o sorteio de Amigo Secreto. Adicione os nomes dos participantes e deixe a sorte decidir quem tira quem!
+Projeto-desafio proposto durante a trilha de desenvolvimento Front-end da formação Oracle Next Education em parceria com a Alura.
+Para jogar o "Amigo Secreto" adicione os nomes dos participantes e deixe a sorte decidir quem tira quem!
 
-<div style="width: 90%; text-align: center; margin: 0 auto;">
-
-![Demonstração do Amigo Secreto](Gravando-2025-09-22-220701.gif)
-</div>
-
+<p align="center">
+  <img src="https://github.com/samchambela/desafio-oracle-one-amigo-secreto/blob/main/Gravando-2025-09-22-220701.gif" style="width: 90%; margin: 0 auto">
+</p>
 ---
 
 ## ✨ Funcionalidades
@@ -15,7 +14,6 @@ Uma aplicação web simples e divertida para realizar o sorteio de Amigo Secreto
 - **Validação de Nomes:** O sistema impede a adição de nomes em branco ou duplicados.
 - **Remover Participantes:** É possível remover um amigo da lista a qualquer momento antes do sorteio.
 - **Sorteio Simples:** Com um clique, o sistema sorteia um amigo secreto para você.
-- **Interface Intuitiva:** Design limpo e fácil de usar.
 
 ---
 
@@ -41,6 +39,8 @@ Como é um projeto front-end puro, não há necessidade de instalação de depen
 2.  **Navegue até a pasta** do projeto.
 
 3.  **Abra o arquivo `index.html`** no seu navegador de preferência (Google Chrome, Firefox, etc.).
+
+> EXTRA: Caso queira executar o projeto em produção, você pode clicar [aqui](https://samchambela.github.io/desafio-oracle-one-amigo-secreto/)!
 
 E pronto! Você já pode começar a adicionar os amigos e fazer o sorteio.
 
